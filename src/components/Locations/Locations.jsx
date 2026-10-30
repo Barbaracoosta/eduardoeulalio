@@ -2,7 +2,7 @@ import './Locations.css'
 
 const units = [
   {
-    name: 'Unidade Centro',
+    name: 'Centro',
     neighborhood: 'Centro',
     address: 'Rua Francisco Santiago da Costa, 213, sala 12',
     building: 'Galeria 213',
@@ -10,7 +10,7 @@ const units = [
     maps: 'https://www.google.com/maps/search/?api=1&query=Rua+Francisco+Santiago+da+Costa+213+Paulista+PE',
   },
   {
-    name: 'Unidade Janga',
+    name: 'Janga',
     neighborhood: 'Janga',
     address: 'Rua Doutor Luís Inácio de Andrade Lima, 1055, sala 09',
     building: 'Galeria Tiana Albuquerque',
@@ -37,10 +37,10 @@ function Locations() {
             <article className="location-card" key={unit.name}>
               <div className="location-card__top">
                 <span className="location-card__index">0{index + 1}</span>
-                <span className="location-card__label">EDUARDO EULÁLIO ADVOCACIA</span>
+                
               </div>
               <div className="location-card__content">
-                <span className="location-card__neighborhood">{unit.neighborhood} · PAULISTA/PE</span>
+                <span className="location-card__neighborhood">UNIDADE · PAULISTA/PE</span>
                 <h3>{unit.name}</h3>
                 <address>
                   <span>{unit.address}</span>
