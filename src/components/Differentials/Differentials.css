@@ -1,0 +1,10 @@
+.differentials-section { background: var(--navy); color: white; }
+.differentials-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 12%; }
+.differentials-section .section-title { color: white; }
+.differentials-section .section-copy { color: #b9c2ce; font-size: 14px; }
+.differential-item { display: grid; grid-template-columns: 42px 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+.differential-item:first-child { border-top: 1px solid rgba(255,255,255,.16); }
+.differential-item > span { color: #c6b58d; font: 16px var(--serif); }
+.differential-item h3 { margin: 0 0 7px; font: 23px var(--serif); font-weight: 400; }
+.differential-item p { margin: 0; color: #b9c2ce; font-size: 13px; line-height: 1.7; }
+@media(max-width: 760px) { .differentials-layout { grid-template-columns: 1fr; gap: 42px; } }
