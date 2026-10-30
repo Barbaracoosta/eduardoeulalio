@@ -1,87 +1,161 @@
 .locations {
-  background: #f4f3f0;
-  color: #171b24;
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  color: var(--white);
 }
 
-.locations__heading {
-  max-width: 650px;
-  margin-bottom: 42px;
+.locations::before {
+  position: absolute;
+  top: -190px;
+  right: -130px;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(185, 167, 125, .14);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
 }
 
-.locations__heading h2 {
-  margin: 12px 0 14px;
-  font-family: var(--font-heading, Georgia, serif);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 500;
-  line-height: 1.12;
+.locations__intro {
+  position: relative;
+  z-index: 1;
+  max-width: 690px;
+  margin-bottom: 52px;
 }
 
-.locations__heading p {
-  max-width: 540px;
-  color: #626873;
-  line-height: 1.7;
+.locations .section-title {
+  max-width: 620px;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.locations .section-copy {
+  max-width: 570px;
+  color: rgba(255, 255, 255, .68);
+}
+
+.locations .section-kicker {
+  color: var(--gold);
 }
 
 .locations__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 22px;
 }
 
 .location-card {
-  min-height: 260px;
-  padding: clamp(24px, 4vw, 38px);
-  border: 1px solid #d9d9d5;
-  background: #fff;
   display: flex;
+  min-height: 330px;
   flex-direction: column;
   align-items: flex-start;
+  padding: clamp(25px, 4vw, 42px);
+  border: 1px solid rgba(255, 255, 255, .17);
+  background: rgba(255, 255, 255, .045);
+  transition: border-color .25s ease, background .25s ease, transform .25s ease;
 }
 
-.location-card__number {
-  color: #777d87;
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
+.location-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(185, 167, 125, .65);
+  background: rgba(255, 255, 255, .075);
+}
+
+.location-card__top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
+}
+
+.location-card__index {
+  color: var(--gold);
+  font: 24px var(--serif);
+}
+
+.location-card__label {
+  color: rgba(255, 255, 255, .52);
+  font-size: 9px;
+  letter-spacing: .16em;
+  text-align: right;
+}
+
+.location-card__content {
+  padding: 30px 0 28px;
+}
+
+.location-card__neighborhood {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
 }
 
 .location-card h3 {
-  margin: 24px 0 14px;
-  font-family: var(--font-heading, Georgia, serif);
-  font-size: 1.65rem;
-  font-weight: 500;
+  margin: 12px 0 18px;
+  color: var(--white);
+  font: 30px/1.15 var(--serif);
+  font-weight: 400;
 }
 
 .location-card address {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  color: #626873;
-  font-size: 0.94rem;
+  gap: 7px;
+  color: rgba(255, 255, 255, .7);
+  font-size: 13px;
   font-style: normal;
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
-.location-card a {
+.location-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
   margin-top: auto;
-  padding-top: 26px;
-  color: #171b24;
-  font-size: 0.9rem;
-  font-weight: 600;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--gold);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
   text-decoration: none;
-  border-bottom: 1px solid #9da1a7;
-  padding-bottom: 5px;
+  text-transform: uppercase;
+  transition: color .2s ease;
 }
 
-.location-card a:hover {
-  color: #777d87;
+.location-card__link span {
+  color: var(--gold);
+  font-size: 15px;
 }
 
-@media (max-width: 680px) {
+.location-card__link:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 700px) {
+  .locations__intro {
+    margin-bottom: 34px;
+  }
+
   .locations__grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .location-card {
-    min-height: 230px;
+    min-height: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .location-card {
+    transition: none;
   }
 }
