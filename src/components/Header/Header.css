@@ -1,7 +1,7 @@
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.97); border-bottom: 1px solid #ececef; }
 .header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--navy); text-decoration: none; }
-.brand-mark { width: 39px; height: 39px; display: grid; place-items: center; border: 1px solid var(--gold); font: 19px var(--serif); }
+.brand-mark { width: 42px; height: 42px; flex: 0 0 42px; object-fit: contain; border: 1px solid var(--gold); background: #fff; }
 .brand-name { font: 600 11px/1.5 var(--sans); letter-spacing: .13em; }
 .brand-name small { display: block; font-size: 9px; font-weight: 400; letter-spacing: .28em; }
 .main-nav { display: flex; align-items: center; gap: 25px; }
