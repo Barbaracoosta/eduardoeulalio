@@ -4,8 +4,8 @@
 .brand-mark { width: 42px; height: 42px; flex: 0 0 42px; object-fit: contain; border: 1px solid var(--gold); background: #fff; }
 .brand-name { font: 600 11px/1.5 var(--sans); letter-spacing: .13em; }
 .brand-name small { display: block; font-size: 9px; font-weight: 400; letter-spacing: .28em; }
-.main-nav { display: flex; align-items: center; gap: 25px; }
-.main-nav a { color: #4f5967; font-size: 11px; text-decoration: none; transition: color .2s; }
+.main-nav { display: flex; align-items: center; gap: 18px; }
+.main-nav a { color: #4f5967; font-size: 10.5px; text-decoration: none; transition: color .2s; }
 .main-nav a:hover { color: #9b8962; }
 .main-nav .header-cta { padding: 14px 17px; background: var(--navy); color: white; letter-spacing: .04em; text-transform: uppercase; }
 .menu-toggle { display: none; }
