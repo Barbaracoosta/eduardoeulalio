@@ -5,6 +5,7 @@ const links = [
   ['O escritório', '#sobre'],
   ['Áreas de atuação', '#atuacao'],
   ['Diferenciais', '#diferenciais'],
+  ['Unidades', '#unidades'],
   ['Dúvidas', '#duvidas'],
   ['Contato', '#contato'],
 ]
