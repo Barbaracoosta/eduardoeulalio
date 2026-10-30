@@ -15,7 +15,7 @@ export default function Header() {
     <header className="site-header">
       <div className="header-inner container">
         <a className="brand" href="#inicio" aria-label="Eduardo Eulálio Advocacia - início">
-          <span className="brand-mark">EE</span>
+          <img className="brand-mark" src="/brand-mark.svg" alt="" />
           <span className="brand-name">EDUARDO EULÁLIO <small>ADVOCACIA</small></span>
         </a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Abrir menu">
