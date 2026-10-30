@@ -1,0 +1,20 @@
+.site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.97); border-bottom: 1px solid #ececef; }
+.header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--navy); text-decoration: none; }
+.brand-mark { width: 39px; height: 39px; display: grid; place-items: center; border: 1px solid var(--gold); font: 19px var(--serif); }
+.brand-name { font: 600 11px/1.5 var(--sans); letter-spacing: .13em; }
+.brand-name small { display: block; font-size: 9px; font-weight: 400; letter-spacing: .28em; }
+.main-nav { display: flex; align-items: center; gap: 25px; }
+.main-nav a { color: #4f5967; font-size: 11px; text-decoration: none; transition: color .2s; }
+.main-nav a:hover { color: #9b8962; }
+.main-nav .header-cta { padding: 14px 17px; background: var(--navy); color: white; letter-spacing: .04em; text-transform: uppercase; }
+.menu-toggle { display: none; }
+@media(max-width: 900px) {
+ .header-inner { min-height: 72px; }
+ .menu-toggle { display: flex; flex-direction: column; gap: 5px; padding: 10px; border: 0; background: none; }
+ .menu-toggle span { width: 23px; height: 1px; background: var(--navy); }
+ .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 22px 24px 26px; background: white; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 20px; }
+ .main-nav.is-open { display: flex; }
+ .main-nav a { font-size: 13px; }
+ .main-nav .header-cta { text-align: center; }
+}
