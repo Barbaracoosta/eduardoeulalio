@@ -19,10 +19,10 @@ export default function Header() {
           <img className="brand-mark" src="/brand-mark.svg" alt="" />
           <span className="brand-name">EDUARDO EULÁLIO <small>ADVOCACIA</small></span>
         </a>
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Abrir menu">
+        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="site-navigation" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}>
           <span /><span /><span />
         </button>
-        <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Navegação principal">
+        <nav id="site-navigation" className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Navegação principal">
           {links.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
           <a className="header-cta" href="https://wa.me/5581995438654" target="_blank" rel="noreferrer">Falar com o escritório</a>
         </nav>
