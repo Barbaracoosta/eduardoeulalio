@@ -1,3 +1,5 @@
+import './Locations.css'
+
 const units = [
   {
     name: 'Unidade Centro',
