@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Header.css'
 
 const links = [
@@ -12,19 +12,64 @@ const links = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    function handleEscape(event) {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+
+    window.addEventListener('keydown', handleEscape)
+    return () => window.removeEventListener('keydown', handleEscape)
+  }, [])
+
   return (
     <header className="site-header">
       <div className="header-inner container">
-        <a className="brand" href="#inicio" aria-label="Eduardo Eulálio Advocacia - início">
+        <a
+          className="brand"
+          href="#inicio"
+          aria-label="Eduardo Eulálio Advocacia - início"
+          onClick={() => setMenuOpen(false)}
+        >
           <img className="brand-mark" src="/brand-mark.svg" alt="" />
-          <span className="brand-name">EDUARDO EULÁLIO <small>ADVOCACIA</small></span>
+          <span className="brand-name">
+            EDUARDO EULÁLIO
+            <small>ADVOCACIA</small>
+          </span>
         </a>
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="site-navigation" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}>
-          <span /><span /><span />
+
+        <button
+          type="button"
+          className={menuOpen ? 'menu-toggle is-active' : 'menu-toggle'}
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-expanded={menuOpen}
+          aria-controls="site-navigation"
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+        >
+          <span />
+          <span />
+          <span />
         </button>
-        <nav id="site-navigation" className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Navegação principal">
-          {links.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
-          <a className="header-cta" href="https://wa.me/5581995438654" target="_blank" rel="noreferrer">Falar com o escritório</a>
+
+        <nav
+          id="site-navigation"
+          className={menuOpen ? 'main-nav is-open' : 'main-nav'}
+          aria-label="Navegação principal"
+        >
+          {links.map(([label, href]) => (
+            <a key={href} href={href} onClick={() => setMenuOpen(false)}>
+              {label}
+            </a>
+          ))}
+          <a
+            className="header-cta"
+            href="https://wa.me/5581995438654"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setMenuOpen(false)}
+          >
+            Falar com o escritório
+          </a>
         </nav>
       </div>
     </header>

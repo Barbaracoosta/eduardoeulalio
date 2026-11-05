@@ -1,5 +1,21 @@
 import './WhatsAppButton.css'
 
 export default function WhatsAppButton() {
-  return <a className="whatsapp-float" href="https://wa.me/5581995438654" target="_blank" rel="noreferrer" aria-label="Falar com o escritório pelo WhatsApp">WhatsApp</a>
+  return (
+    <a
+      className="whatsapp-float"
+      href="https://wa.me/5581995438654"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Falar com o escritório pelo WhatsApp"
+      title="Falar pelo WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path
+          fill="currentColor"
+          d="M16.02 3.2A12.72 12.72 0 0 0 5.1 22.45L3.3 28.8l6.5-1.7A12.8 12.8 0 1 0 16.02 3.2Zm0 23.3c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.86 1.01 1.03-3.76-.27-.43A10.48 10.48 0 1 1 16.02 26.5Zm5.75-7.85c-.31-.16-1.83-.9-2.11-1-.28-.1-.49-.16-.7.16-.21.31-.8 1-.98 1.2-.18.2-.36.23-.67.08-.31-.16-1.31-.49-2.5-1.55-.92-.82-1.55-1.83-1.73-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.36.46-.54.15-.18.2-.31.31-.52.1-.21.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.6-.51-.52-.7-.53h-.6c-.2 0-.54.08-.82.39-.28.31-1.08 1.05-1.08 2.57s1.1 2.98 1.25 3.19c.15.2 2.16 3.3 5.23 4.62.73.31 1.3.5 1.74.64.73.23 1.4.2 1.92.12.59-.09 1.83-.75 2.09-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.36Z"
+        />
+      </svg>
+    </a>
+  )
 }
