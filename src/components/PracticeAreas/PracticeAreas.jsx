@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './PracticeAreas.css'
 
 const areas = [
@@ -40,6 +41,8 @@ const areas = [
 ]
 
 export default function PracticeAreas() {
+  const [expandedArea, setExpandedArea] = useState(null)
+
   return (
     <section className="section areas-section" id="atuacao">
       <div className="container">
@@ -63,10 +66,21 @@ export default function PracticeAreas() {
               </div>
               <h3>{area.title}</h3>
               <p className="area-description">{area.desc}</p>
-              <details className="area-details">
-                <summary>Exemplos de demandas</summary>
-                <p>{area.examples}</p>
-              </details>
+              <div className={`area-details${expandedArea === area.n ? ' is-open' : ''}`}>
+                <button
+                  className="area-details-toggle"
+                  type="button"
+                  aria-expanded={expandedArea === area.n}
+                  aria-controls={`area-examples-${area.n}`}
+                  onClick={() => setExpandedArea(current => current === area.n ? null : area.n)}
+                >
+                  Exemplos de demandas
+                  <span aria-hidden="true">{expandedArea === area.n ? '−' : '+'}</span>
+                </button>
+                {expandedArea === area.n && (
+                  <p id={`area-examples-${area.n}`}>{area.examples}</p>
+                )}
+              </div>
             </article>
           ))}
         </div>
