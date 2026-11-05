@@ -30,6 +30,7 @@
   height: 48px;
   flex: 0 0 48px;
   object-fit: contain;
+  filter: grayscale(1) contrast(1.08);
   padding: 4px;
   border: 1px solid #d9dde3;
   background: #f7f8fa;
