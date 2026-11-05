@@ -1,12 +1,42 @@
 import './PracticeAreas.css'
 
 const areas = [
-  { n: '01', title: 'Direito Criminal', desc: 'Defesa e acompanhamento em investigações, inquéritos, prisões em flagrante, audiências de custódia, ações penais e demais procedimentos criminais.' },
-  { n: '02', title: 'Família e Sucessões', desc: 'Orientação em divórcio, união estável, guarda, convivência, alimentos, partilha de bens, inventários e planejamento sucessório.' },
-  { n: '03', title: 'Direito Civil e do Consumidor', desc: 'Atuação em indenizações, contratos, cobranças e negativações indevidas, conflitos bancários, fraudes e relações de consumo.' },
-  { n: '04', title: 'Direito Previdenciário', desc: 'Requerimentos, revisões e recursos relacionados a benefícios do INSS, aposentadorias, benefícios por incapacidade, pensão por morte e BPC/LOAS.' },
-  { n: '05', title: 'Direito Trabalhista', desc: 'Orientação sobre vínculo empregatício, verbas rescisórias, horas extras, FGTS, adicionais, acidentes de trabalho e reclamações trabalhistas.' },
-  { n: '06', title: 'Consultoria Jurídica', desc: 'Análise de documentos, elaboração e revisão de contratos, orientação preventiva, notificações, negociação e avaliação de riscos jurídicos.' },
+  {
+    n: '01',
+    title: 'Direito Criminal',
+    desc: 'Defesa e acompanhamento em investigações, procedimentos policiais e processos criminais, com análise cuidadosa de cada etapa.',
+    examples: 'Inquéritos policiais, investigações, prisões em flagrante, audiências de custódia, pedidos de liberdade provisória, habeas corpus, medidas cautelares, ações penais, acompanhamento de processos criminais, crimes contra o patrimônio, questões relacionadas à violência doméstica e demais procedimentos criminais.',
+  },
+  {
+    n: '02',
+    title: 'Família e Sucessões',
+    desc: 'Orientação jurídica para questões familiares, organização patrimonial e procedimentos relacionados à sucessão.',
+    examples: 'Divórcio consensual ou litigioso, dissolução de união estável, guarda e regulamentação de convivência, pensão alimentícia, revisão e exoneração de alimentos, investigação e reconhecimento de paternidade, partilha de bens, inventário judicial e extrajudicial, arrolamento, testamento e planejamento sucessório.',
+  },
+  {
+    n: '03',
+    title: 'Direito Civil e do Consumidor',
+    desc: 'Atuação em conflitos contratuais, relações de consumo, responsabilidade civil e questões envolvendo instituições financeiras.',
+    examples: 'Ações de indenização por danos materiais e morais, responsabilidade civil, cobranças e negativações indevidas, problemas com contratos, rescisão contratual, obrigações de fazer, conflitos bancários, descontos não autorizados, fraudes, empréstimos e financiamentos, vícios e defeitos de produtos ou serviços e demais relações de consumo.',
+  },
+  {
+    n: '04',
+    title: 'Direito Previdenciário',
+    desc: 'Análise e acompanhamento de requerimentos, revisões e demandas relacionadas aos benefícios previdenciários e assistenciais.',
+    examples: 'Requerimento e acompanhamento de benefícios do INSS, aposentadoria por idade, por tempo de contribuição e especial, benefício por incapacidade temporária, aposentadoria por incapacidade permanente, auxílio-acidente, salário-maternidade, pensão por morte, BPC/LOAS, revisão de benefícios, recursos administrativos e ações judiciais previdenciárias.',
+  },
+  {
+    n: '05',
+    title: 'Direito Trabalhista',
+    desc: 'Orientação sobre direitos e deveres nas relações de trabalho, tanto em questões preventivas quanto em conflitos.',
+    examples: 'Análise das relações de trabalho, reconhecimento de vínculo empregatício, verbas rescisórias, horas extras, férias, 13º salário, FGTS, aviso-prévio, adicionais de insalubridade e periculosidade, estabilidade provisória, acidentes de trabalho, assédio moral, rescisão indireta, justa causa e defesa e acompanhamento de reclamações trabalhistas.',
+  },
+  {
+    n: '06',
+    title: 'Consultoria Jurídica',
+    desc: 'Suporte jurídico preventivo para compreender riscos, organizar documentos e avaliar caminhos possíveis.',
+    examples: 'Análise de documentos, elaboração e revisão de contratos, orientação preventiva, avaliação de riscos jurídicos, notificações extrajudiciais, negociação, mediação, composição de conflitos e definição de estratégias para evitar ou solucionar demandas judiciais.',
+  },
 ]
 
 export default function PracticeAreas() {
@@ -14,20 +44,49 @@ export default function PracticeAreas() {
     <section className="section areas-section" id="atuacao">
       <div className="container">
         <div className="areas-heading">
-          <div><span className="section-kicker">Áreas de atuação</span><h2 className="section-title">Soluções jurídicas para diferentes necessidades.</h2></div>
-          <p className="section-copy">Cada situação exige uma análise própria. Conheça as áreas de atuação do escritório e entre em contato para compreender as possibilidades aplicáveis ao seu caso.</p>
+          <div>
+            <span className="section-kicker">Áreas de atuação</span>
+            <h2 className="section-title">Atuação jurídica com atenção a cada detalhe.</h2>
+          </div>
+          <p className="section-copy">
+            Conheça as principais demandas atendidas pelo escritório. Cada situação é
+            avaliada individualmente, considerando seus fatos, documentos e contexto.
+          </p>
         </div>
+
         <div className="areas-grid">
           {areas.map(area => (
             <article className="area-card" key={area.n}>
-              <span className="area-number">{area.n}</span>
+              <div className="area-card-top">
+                <span className="area-number">{area.n}</span>
+                <span className="area-rule" aria-hidden="true" />
+              </div>
               <h3>{area.title}</h3>
-              <p>{area.desc}</p>
-              <a href="https://wa.me/5581995438654" target="_blank" rel="noreferrer" aria-label={`Consultar sobre ${area.title}`}>Conversar sobre esta área <span>↗</span></a>
+              <p className="area-description">{area.desc}</p>
+              <details className="area-details">
+                <summary>Exemplos de demandas</summary>
+                <p>{area.examples}</p>
+              </details>
             </article>
           ))}
         </div>
-        <p className="areas-disclaimer">A medida jurídica adequada depende da análise individualizada dos fatos e documentos de cada situação.</p>
+
+        <div className="areas-bottom">
+          <div className="areas-bottom-item">
+            <span className="section-kicker">Atendimento</span>
+            <p>Paulista/PE e Região Metropolitana do Recife, com possibilidade de atendimento online em todo o Brasil, conforme a natureza da demanda e as regras aplicáveis à advocacia.</p>
+          </div>
+          <div className="areas-bottom-item">
+            <span className="section-kicker">Como trabalhamos</span>
+            <p>Atendimento próximo, orientações claras, acompanhamento dos procedimentos e atuação técnica, com estratégias juridicamente fundamentadas e adequadas às particularidades de cada caso.</p>
+          </div>
+        </div>
+
+        <p className="areas-disclaimer">
+          A apresentação destas áreas é informativa. A contratação e a definição de
+          eventuais medidas dependem de análise individualizada, não havendo garantia
+          de resultado ou indicação prévia de que uma medida específica seja adequada.
+        </p>
       </div>
     </section>
   )
