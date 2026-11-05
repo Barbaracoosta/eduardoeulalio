@@ -71,17 +71,6 @@ export default function PracticeAreas() {
           ))}
         </div>
 
-        <div className="areas-bottom">
-          <div className="areas-bottom-item">
-            <span className="section-kicker">Atendimento</span>
-            <p>Paulista/PE e Região Metropolitana do Recife, com possibilidade de atendimento online em todo o Brasil, conforme a natureza da demanda e as regras aplicáveis à advocacia.</p>
-          </div>
-          <div className="areas-bottom-item">
-            <span className="section-kicker">Como trabalhamos</span>
-            <p>Atendimento próximo, orientações claras, acompanhamento dos procedimentos e atuação técnica, com estratégias juridicamente fundamentadas e adequadas às particularidades de cada caso.</p>
-          </div>
-        </div>
-
         <p className="areas-disclaimer">
           A apresentação destas áreas é informativa. A contratação e a definição de
           eventuais medidas dependem de análise individualizada, não havendo garantia
