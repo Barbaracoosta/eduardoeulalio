@@ -29,6 +29,7 @@
 
 .areas-grid {
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
@@ -36,6 +37,7 @@
 
 .area-card {
   position: relative;
+  align-self: start;
   display: flex;
   flex-direction: column;
   min-height: 310px;
@@ -128,8 +130,7 @@
 
 .area-details > p {
   margin: 16px 0 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
+  padding-top: 0;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.85;
