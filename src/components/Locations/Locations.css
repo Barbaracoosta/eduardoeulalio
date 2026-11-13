@@ -1,45 +1,211 @@
 .locations {
-  position: relative; overflow: hidden; background: #101a2b; color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding-top: 76px;
+  padding-bottom: 76px;
+  background: #101a2b;
+  color: #fff;
 }
+
 .locations::before {
-  position: absolute; top: -190px; right: -130px; width: 480px; height: 480px;
-  border: 1px solid rgba(230,237,245,.13); border-radius: 50%; content: ""; pointer-events: none;
+  position: absolute;
+  top: -190px;
+  right: -130px;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(230, 237, 245, 0.13);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
 }
-.locations__intro { position: relative; z-index: 1; max-width: 690px; margin-bottom: 52px; }
-.locations .section-title { max-width: 620px; margin-bottom: 16px; color: #fff; }
-.locations .section-copy { max-width: 570px; color: #c0c8d3; }
-.locations .section-kicker { color: #cbd3dd; }
-.locations__grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+
+.locations__intro {
+  position: relative;
+  z-index: 1;
+  max-width: 690px;
+  margin-bottom: 32px;
+}
+
+.locations .section-title {
+  max-width: 620px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.locations .section-copy {
+  max-width: 570px;
+  color: #c0c8d3;
+}
+
+.locations .section-kicker {
+  color: #cbd3dd;
+}
+
+.locations__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
 .location-card {
-  display: flex; min-height: 330px; flex-direction: column; align-items: flex-start;
-  padding: clamp(25px, 4vw, 42px); border: 1px solid rgba(255,255,255,.2);
-  background: rgba(255,255,255,.055);
-  transition: border-color .25s ease, background .25s ease, transform .25s ease;
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(24px, 3vw, 30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.055);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
 }
-.location-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.38); background: rgba(255,255,255,.095); }
+
+.location-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.095);
+}
+
 .location-card__top {
-  display: flex; width: 100%; align-items: center; justify-content: flex-start; gap: 16px;
-  padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,.16);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
-.location-card__index { color: #d0d7e0; font: 24px var(--serif); }
-.location-card__label { color: #c0c8d3; font-size: 9px; letter-spacing: .16em; text-align: right; }
-.location-card__content { padding: 30px 0 28px; }
-.location-card__neighborhood { color: #c0c8d3; font-size: 10px; font-weight: 700; letter-spacing: .14em; }
-.location-card h3 { margin: 12px 0 18px; color: #fff; font: 30px/1.15 var(--serif); font-weight: 400; }
-.location-card address { display: flex; flex-direction: column; gap: 7px; color: #d0d7e0; font-size: 13px; font-style: normal; line-height: 1.65; overflow-wrap: anywhere; }
+
+.location-card__index {
+  color: #d0d7e0;
+  font: 22px var(--serif);
+}
+
+.location-card__label {
+  color: #c0c8d3;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-align: right;
+}
+
+.location-card__content {
+  padding: 20px 0 22px;
+}
+
+.location-card__neighborhood {
+  color: #c0c8d3;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.location-card h3 {
+  margin: 9px 0 13px;
+  color: #fff;
+  font: 27px/1.15 var(--serif);
+  font-weight: 400;
+}
+
+.location-card address {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #d0d7e0;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
 .location-card__link {
-  display: inline-flex; align-items: center; gap: 18px; margin-top: auto; padding-bottom: 7px;
-  border-bottom: 1px solid #aeb8c5; color: #fff; font-size: 11px; font-weight: 700;
-  letter-spacing: .08em; text-decoration: none; text-transform: uppercase; transition: color .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #aeb8c5;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
 }
-.location-card__link span { color: #cbd3dd; font-size: 15px; }
-.location-card__link:hover { color: #dce5ee; }
+
+.location-card__link span {
+  color: #cbd3dd;
+  font-size: 14px;
+}
+
+.location-card__link:hover {
+  color: #dce5ee;
+}
+
+@media (max-width: 900px) {
+  .locations {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .locations__grid {
+    gap: 16px;
+  }
+
+  .location-card {
+    padding: 24px 22px;
+  }
+
+  .location-card address {
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 700px) {
-  .locations__intro { margin-bottom: 34px; }
-  .locations__grid { grid-template-columns: 1fr; gap: 14px; }
-  .location-card { min-height: 0; padding: 25px 22px; }
-  .location-card__content { padding: 24px 0; }
-  .location-card h3 { font-size: 28px; }
-  .location-card address { font-size: 13px; }
+  .locations {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .locations__intro {
+    margin-bottom: 30px;
+  }
+
+  .locations__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .location-card {
+    min-height: 0;
+    padding: 23px 21px;
+  }
+
+  .location-card__content {
+    padding: 20px 0;
+  }
+
+  .location-card h3 {
+    font-size: 26px;
+  }
+
+  .location-card address {
+    font-size: 12px;
+  }
 }
-@media (prefers-reduced-motion: reduce) { .location-card { transition: none; } }
+
+@media (max-width: 380px) {
+  .location-card {
+    padding: 21px 18px;
+  }
+
+  .location-card address {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .location-card {
+    transition: none;
+  }
+}
