@@ -16,6 +16,7 @@ export default function FAQ() {
         <div className="faq-intro">
           <span className="section-kicker">Perguntas frequentes</span>
           <h2 className="section-title">Informação para dar o primeiro passo.</h2>
+          <p className="section-copy">Se sua dúvida não estiver aqui, entre em contato com o escritório.</p>
         </div>
         <div className="faq-content">
           <div className="faq-list">
@@ -26,7 +27,6 @@ export default function FAQ() {
               </details>
             ))}
           </div>
-          <p className="faq-contact-note">Não encontrou sua dúvida? Entre em contato.</p>
         </div>
       </div>
     </section>
