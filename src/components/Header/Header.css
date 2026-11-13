@@ -218,7 +218,7 @@
   .main-nav .header-cta {
     display: inline-flex;
     min-height: 52px;
-    margin: 22px 0 0;
+    margin: 32px 0 0;
     border-color: #101a2b;
     background: #101a2b;
     color: #fff;
@@ -284,13 +284,13 @@
 
 /* Ajustes finais de contraste e alinhamento */
 .main-nav .header-cta {
-  border-color: #34445b;
-  background: #34445b;
+  border-color: #101a2b;
+  background: #101a2b;
 }
 
 .main-nav .header-cta:hover {
-  border-color: #425873;
-  background: #425873;
+  border-color: #1b293d;
+  background: #1b293d;
 }
 
 @media (max-width: 1050px) {
@@ -301,12 +301,12 @@
 
 @media (max-width: 1050px) {
   .main-nav .header-cta {
-    border-color: #34445b;
-    background: #34445b;
+    border-color: #101a2b;
+    background: #101a2b;
   }
 
   .main-nav .header-cta:hover {
-    border-color: #425873;
-    background: #425873;
+    border-color: #1b293d;
+    background: #1b293d;
   }
 }
