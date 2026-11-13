@@ -63,7 +63,7 @@
 .main-nav a {
   position: relative;
   color: #596170;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.015em;
   text-decoration: none;
@@ -201,7 +201,7 @@
     padding: 17px 5px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.13);
     color: #f5f6f8;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
   }
 
@@ -214,6 +214,7 @@
   }
 
   .main-nav .header-cta {
+    display: none;
     min-height: 52px;
     margin: 22px 0 0;
     border-color: #fff;
