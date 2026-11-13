@@ -1,4 +1,4 @@
-.faq-section { background: var(--paper); }
+.faq-section { background: #fff; }
 .faq-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; }
 .faq-list { border-top: 1px solid var(--line); }
 .faq-item { border-bottom: 1px solid var(--line); }
