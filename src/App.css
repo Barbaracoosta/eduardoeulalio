@@ -32,10 +32,6 @@ a {
   color: inherit;
 }
 
-section {
-  scroll-margin-top: 88px;
-}
-
 .container {
   width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
@@ -101,6 +97,13 @@ section {
   color: var(--navy);
 }
 
+/* Ajusta a posição das âncoras à altura real do menu fixo */
+@media (max-width: 1050px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     width: min(100% - 36px, 540px);
@@ -117,5 +120,11 @@ section {
   .section-copy {
     font-size: 14px;
     line-height: 1.75;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 72px;
   }
 }
