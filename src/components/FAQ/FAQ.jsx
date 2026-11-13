@@ -1,7 +1,6 @@
 import './FAQ.css'
 
 const questions = [
-  ['O escritório atende apenas em Paulista/PE?', 'O escritório tem atuação em Paulista/PE e nos municípios da Região Metropolitana do Recife. Também atende clientes de todo o Brasil, inclusive online, conforme a natureza da demanda.'],
   ['É possível receber atendimento online?', 'Sim. O atendimento online pode ser realizado para clientes de todo o Brasil, observadas as características de cada demanda e as regras aplicáveis ao exercício da advocacia.'],
   ['Quais documentos preciso apresentar?', 'Os documentos necessários variam conforme o assunto. No primeiro contato, o escritório poderá orientar sobre as informações e os documentos pertinentes à análise inicial.'],
   ['O contato pelo WhatsApp garante a contratação?', 'Não. O primeiro contato serve para apresentar a necessidade e receber orientações iniciais. A contratação e a definição da estratégia dependem de análise individualizada.'],
