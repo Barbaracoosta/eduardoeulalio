@@ -280,3 +280,33 @@
     transition: none;
   }
 }
+
+
+/* Ajustes finais de contraste e alinhamento */
+.main-nav .header-cta {
+  border-color: #34445b;
+  background: #34445b;
+}
+
+.main-nav .header-cta:hover {
+  border-color: #425873;
+  background: #425873;
+}
+
+@media (max-width: 1050px) {
+  .main-nav {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1050px) {
+  .main-nav .header-cta {
+    border-color: #34445b;
+    background: #34445b;
+  }
+
+  .main-nav .header-cta:hover {
+    border-color: #425873;
+    background: #425873;
+  }
+}
