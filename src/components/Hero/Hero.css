@@ -109,15 +109,15 @@
 }
 
 .hero-actions .button--outline {
-  border-color: #101a2b;
-  background: #101a2b;
+  border-color: rgba(230, 234, 240, 0.55);
+  background: transparent;
   color: #fff;
 }
 
 .hero-actions .button--outline:hover {
-  border-color: #1b293d;
-  background: #1b293d;
-  color: #fff;
+  border-color: #fff;
+  background: #fff;
+  color: #101a2b;
 }
 
 .hero-footnote {
