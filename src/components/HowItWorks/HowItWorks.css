@@ -1,9 +1,10 @@
-.process-section { background: white; }
+.process-section { background: #e9eff5; color: var(--ink); }
 .process-section > .container > .section-title { max-width: 650px; }
+.process-section .section-kicker { color: #596575; }
 .process-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 45px; }
-.process-card { padding: 28px 0; border-top: 1px solid var(--line); }
-.process-card > span { color: var(--muted); font: 18px var(--serif); }
+.process-card { padding: 28px 0; border-top: 1px solid #cbd5df; }
+.process-card > span { color: #596575; font: 18px var(--serif); }
 .process-card h3 { margin: 22px 0 12px; color: var(--navy); font: 25px var(--serif); font-weight: 400; }
-.process-card p { color: var(--muted); font-size: 13px; line-height: 1.8; }
-.process-note { margin-top: 28px; color: #777e87; font-size: 11px; }
+.process-card p { color: #4f5d6e; font-size: 13px; line-height: 1.8; }
+.process-note { margin-top: 28px; color: #596575; font-size: 11px; }
 @media(max-width: 700px) { .process-grid { grid-template-columns: 1fr; gap: 12px; } }

@@ -3,7 +3,7 @@
   --navy-soft: #19263a;
   --ink: #202938;
   --muted: #697383;
-  --paper: #f3f5f7;
+  --paper: #edf2f6;
   --white: #fff;
   --line: #dfe2e5;
   --serif: Georgia, 'Times New Roman', serif;
@@ -30,10 +30,6 @@ textarea {
 
 a {
   color: inherit;
-}
-
-section {
-  scroll-margin-top: 88px;
 }
 
 .container {
@@ -101,6 +97,13 @@ section {
   color: var(--navy);
 }
 
+/* Ajusta a posição das âncoras à altura real do menu fixo */
+@media (max-width: 1050px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     width: min(100% - 36px, 540px);
@@ -117,5 +120,11 @@ section {
   .section-copy {
     font-size: 14px;
     line-height: 1.75;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 72px;
   }
 }
